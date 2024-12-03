@@ -20,14 +20,10 @@ separated_data = [item.split() for item in lines]
 print(separated_data)
 
 for i in range(len(separated_data)):
-        val = separated_data[i][0]
-        # print(val)
-        col1.append(int(val))
+        col1.append(int(separated_data[i][0]))
+        col2.append(int(separated_data[i][1]))
 
-for j in range(len(separated_data)):
-        val = separated_data[j][1]
-        # print(val)
-        col2.append(int(val))
+
 
 col1.sort()
 col2.sort()
@@ -39,5 +35,6 @@ for i in range(len(col1)):
     else:
         diff = col2[i] - col1[i]
     total_diff += diff
+    #( you could do total_diff += abs(col1[i] - col2[i]))
 
 print (total_diff)
